@@ -1,4 +1,6 @@
 <style>
+  @import url('https://fonts.googleapis.com/css?family=Raleway:200');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
   :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
@@ -8,8 +10,31 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1,
-  h2,
+  h1 {
+    display: flex;
+    margin: 80px auto;
+    padding: 0 1px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 40px;
+    color: rgb(255, 255, 255, 0.75);
+    transition: 0.2s linear;
+    font-family: "Raleway";
+  }
+  h1:hover{
+    color: rgb(255, 255, 255, 1);
+  }
+  h2 {
+    display: flex;
+    margin: 0px auto 5px;
+    padding: 0 1px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    font-family: "Raleway";
+  }
   h3,
   h4,
   h5,
@@ -18,6 +43,10 @@
   }
 
   p {
+    margin: 0;
+  }
+
+  ul{
     margin: 0;
   }
 
@@ -192,9 +221,23 @@
     display: flex;
     margin: 82px auto 32px;
     padding: 0 16px;
-    max-width: 960px;
+    max-width: 500px;
     flex-direction: column;
     align-items: center;
+    color: rgb(255, 255, 255, 0.75); 
+    border:1px solid rgb(0, 204, 255);
+    border-radius: 20px;
+    transition: 0.2s linear;
+  }
+  .content:hover{
+    color: rgb(255, 255, 255, 1);
+  }
+
+  .blocks{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
 
   svg.material-icons {
@@ -421,9 +464,258 @@
     text-decoration-line: underline;
   }
   .resume-download:link{
-    text-decoration-line: underline;
+
     font-weight: bold;
   }
+
+  .content-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 750px;
+    border-radius: 12px;
+    padding: 10px 0px 10px 0px;
+    transition: 0.2s linear;
+    flex-shrink: 0;
+    max-width: fit-content;
+    padding: 10px 10px;
+    background-color: rgb(0, 204, 255, 0.05);
+  }
+  .content-container:hover{
+    background-color: rgb(0, 204, 255, 0.1);
+  }
+  .education {
+    display: flex;
+    padding: 0 8px;
+    max-width: 400px;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255, 0.75); 
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+    transition: 0.2s linear;
+  }
+  .education:hover{
+    color: rgb(255, 255, 255, 1);
+  }
+  .research {
+    display: flex;
+    padding: 0 8px;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255, 0.75); 
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+    transition: 0.2s linear;
+  }
+  .research:hover{
+    color: rgb(255, 255, 255, 1);
+  }
+  
+  canvas{
+      position:absolute;
+      left:0;
+      top:0;
+      z-index:-1;
+      background-color: rgba(0, 0, 0, 1);
+      width: 100%;
+      height: 100%;
+  }
+  .ut{
+    display: flex;
+    padding: 0 8px;
+    max-width: 400px;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255, 0.75); 
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+    transition: 0.2s linear;
+  }
+  .ut:hover{
+    color: rgb(191, 87, 0, 1);
+  }
+  .fieldset-single{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 750px;
+    margin: 100px auto 100px;
+    padding: 0px 0px 0px 0px;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-color: rgb(0, 204, 255, 0.5);
+  }
+  legend{
+    color: rgb(255, 255, 255, 0.75);
+    font-size: 30px;
+    transition: 0.2s linear;
+    padding: 10px;
+    font-family: "Poppins";
+  }
+  legend:hover{
+    color: rgb(255, 255, 255, 1);
+  }
+  .pdf {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 12px 12px;
+    max-width: fit-content;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255, 0.75); 
+    border:2px solid rgb(0, 204, 255);
+    border-radius: 10px;
+    transition: 0.2s linear;
+    font-family: "Poppins";
+    background-color: rgb(0, 204, 255, 0.05);
+  }
+  .pdf:hover{
+    color: rgb(255, 255, 255, 1);
+    background-color: rgb(0, 204, 255, 0.25);
+  }
+  .content-single {
+    display: flex;
+    padding: 0 8px;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255, 0.75); 
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+    transition: 0.2s linear;
+  }
+  .content-single:hover{
+    color: rgb(255, 255, 255, 1);
+  }
+  .individual-glow {
+    display: flex;
+    padding: 0 8px;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255, 0.75); 
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+    transition: 0.2s linear;
+  }
+  .content-space{
+    margin: 20px 0px 0px 0px;
+  }
+
+  .glow{
+    color: rgb(255, 255, 255, 0.75);
+    transition: 0.2s linear;
+  }
+
+  .glow:hover{
+    color: rgb(255, 255, 255, 1);
+  }
+  
+
+
+  .grid {
+  list-style: none;
+  margin-left: -40px;
+}
+
+.gc {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: -0.25em;
+  min-height: 1px;
+  padding-left: 40px;
+  vertical-align: top;
+}
+
+.gc--1-of-3 {
+  width: 33.33333%;
+}
+
+.gc--2-of-3 {
+  width: 66.66666%;
+}
+
+.naccs {
+  position: relative;
+  max-width: 900px;
+  margin: 100px auto 0;
+}
+
+.naccs .menu div {
+  padding: 15px 20px 15px 40px;
+  margin-bottom: 10px;
+  color: #303F9F;
+  background: #3F51B5;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle;
+  font-weight: 700;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.naccs .menu div:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.naccs .menu div span.light {
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  top: 24px;
+  left: 15px;
+  background-color: #303F9F;
+  border-radius: 100%;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.naccs .menu div.active span.light {
+  background-color: #FBC02D;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  top: 0;
+  border-radius: 0;
+}
+
+.naccs .menu div.active {
+  color: #FBC02D;
+  padding: 15px 20px 15px 20px;
+}
+
+ul.nacc {
+  position: relative;
+  height: 0px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+ul.nacc li {
+  opacity: 0;
+  transform: translateX(50px);
+  position: absolute;
+  list-style: none;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+ul.nacc li.active {
+  transition-delay: 0.3s;
+  z-index: 2;
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+ul.nacc li p {
+  margin: 0;
+}
+.mat-tab-label{ 
+  background-color: yellow !important;
+ }
+
+
 </style>
 
 <!--div class="card-container">
@@ -431,87 +723,124 @@
         <span>Angular DevTools</span>
       </a>
 </div-->
-<div class="content" role="main">
+<!--canvas id="space">Canvas not supported.</canvas-->
+<div role="main">
   <h1>Résumé</h1>
 </div>
-<div class="content" role="main">
-  <h2>Education</h2>
-  <p>
-    The University of Texas at Austin, Austin, TX: August 2018 - May 2022
-  </p>
-  <p>
-    Bachelor of Science in Computer Science, Certificate in Scientific Computation and Data Sciences
-  </p>
-  <p>
-    GPA: 3.79
-  </p>
-</div>
-<div class="content" role="main">
-  <h2>Work Experience</h2>
+
+<fieldset class="fieldset-single">
+  <legend>Education</legend>
+  <div class="content-container" role="main">
+    <div class="ut">
+      <h2>UT Austin</h2>
+      <p>
+        The University of Texas at Austin, Austin, TX
+      </p>
+      <p>
+        August 2018 - May 2022 &nbsp;&nbsp;&nbsp;&nbsp; GPA: 3.8
+      </p>
+      <p>
+        Bachelor of Science in Computer Science 
+      </p>
+      <p>
+        Certificate in Scientific Computation and Data Sciences
+      </p>
+    </div>
+    <div class="education">
+      <h2>Honors and Awards</h2>
+      <ul>
+        <li>
+          National Merit Finalist
+        </li>
+        <li>
+          University Honors
+        </li>
+        <li>
+          Texas All Region Orchestra (2015-2018)
+        </li>
+        <li>
+          AP Scholar with Distinction
+        </li>
+      </ul>
+    </div>
+  </div>
+</fieldset>
+<fieldset class="fieldset-single">
+  <legend>Work Experience</legend>
+  <div class="content-container" role="main">
+    <div class="content-single">
+      <h2>Ethos Group</h2>
+      <ul>
+        <li>
+          Irving, Texas
+        </li>
+        <p>Summer 2021</p>
+        <i>Software Engineer Intern</i>
+        <ul>
+          <li>
+            Create and integrate a full stack ASP.NET Core application into Ethos Group's overall ecosystem that ecompasses Pricing, Menu, and eContracting which supports the F&I Office and contract execution (vehicle purchase, financing, product, etc.)
+          </li>
+          <li>
+            Calculate a customer's potential auto insurance savings by initiating a customer session using our application's API, then calling DealerPolicy's API through either a QR code or generated email, and upon completion of receiving savings, updating Ethos Group's Menu session, audit logs, as well as internal databases storing the customer's information, and at the end generating PDFs in the backend to present and finalize the deal with the customer with the included savings.
+          </li>
+          <li>
+            Utilize Agile principles and clean architecture in a team to develop the DealerPolicy application in weekly sprints, with the development process including boards, sprints, repos, and deployment done within Microsoft's Azure DevOps.
+          </li>
+          <li>
+            Technologies used: Typescript, C#, Angular, HTML, CSS, Node.js, Bootstrap, Azure DevOps, Git, SQL, StencilJS, NgRx, SQL Server Management Studio, Syncfusion PDF Library, SendGrid, Microsoft Remote Desktop, Microsoft Teams, npm.
+          </li>
+        </ul>
+        <h2 class="content-space">Self Employed Private Tutor</h2>
+        <li>
+          Dallas, Texas
+        </li>
+        <p>May 2019 - February 2021</p>
+        <i>High School Math, SAT/PSAT, Violin, Piano Tutor</i>
+      </ul>
+    </div>
+  </div>
+</fieldset>
+<fieldset class="fieldset-single">
+  <legend>Research</legend>
+  <div class="content-container" role="main">
+    <div class="research">
+    <ul>
+      <li>
+        Text Simplification of College Admissions Instructions:
+  A Professionally Simplified and Verified Corpus, Spring 2022 (COLING 2022, to appear)
+      </li>
+      <ul>
+        <li>Maximus Chu, Zachary W. Taylor and Junyi Jessy Li</li>
+        <li>
+          Presents the first corpus of college application texts for the evaluation and fine-tuning of text simplification systems.
+        </li>
+      </ul>
+      <li>
+        <a href="https://github.com/maximuschu/text-simplification-college-admission" class="resume-links">Implementation of Text Simplification Models in the Domain of College Admissions, Spring 2022</a>
+      </li>
+      <ul>
+        <li>
+          Researched the application of text simplification in college applications, a domain which is traditionally done by manually.
+        </li>
+      </ul>
+      <li>
+        <a href="https://drive.google.com/file/d/161RZO8NSWm6Z3QZqckGMtmBBkNjbl6oQ/view?usp=sharing" class="resume-links">Improving Question Answering Models, Fall 2021</a> 
+      </li>
+      <ul>
+        <li>
+          Researched the use of adversarial challenge sets on question answering models, applied to help address and mitigate model shortcomings and help shape models to become more resilient and less prone to fallacies.
+        </li>
+      </ul>
+    </ul>
+    </div>
+  </div>
+</fieldset>
+<fieldset class="fieldset-single">
+  <legend>Projects and Activities</legend>
+<div class="content-container">
+<div class="individual-glow" role="main">
   <ul>
-    <li>
-      Ethos Group, Irving, Texas, Summer 2021
-    </li>
-    <p>
-      Software Engineer Intern
-    </p>
-    <ul>
-      <li>
-        Create and integrate a full stack ASP.NET Core application into Ethos Group's overall ecosystem that ecompasses Pricing, Menu, and eContracting which supports the F&I Office and contract execution (vehicle purchase, financing, product, etc.)
-      </li>
-      <li>
-        Calculate a customer's potential auto insurance savings by initiating a customer session using our application's API, then calling DealerPolicy's API through either a QR code or generated email, and upon completion of receiving savings, updating Ethos Group's Menu session, audit logs, as well as internal databases storing the customer's information, and at the end generating PDFs in the backend to present and finalize the deal with the customer with the included savings.
-      </li>
-      <li>
-        Utilize Agile principles and clean architecture in a team to develop the DealerPolicy application in weekly sprints, with the development process including boards, sprints, repos, and deployment done within Microsoft's Azure DevOps.
-      </li>
-      <li>
-        Technologies used: Typescript, C#, Angular, HTML, CSS, Node.js, Bootstrap, Azure DevOps, Git, SQL, StencilJS, NgRx, SQL Server Management Studio, Syncfusion PDF Library, SendGrid, Microsoft Remote Desktop, Microsoft Teams, npm.
-      </li>
-    </ul>
-    <li>
-      Self Employed Private Tutor, Dallas, Texas, May 2019 - February 2021
-    </li>
-    <p>
-      High School Math, SAT/PSAT, Violin, Piano Tutor
-    </p>
-  </ul>
-</div>
-<div class="content" role="main">
-  <h2>Research</h2>
-  <ul>
-    <li>
-      Text Simplification of College Admissions Instructions:
-A Professionally Simplified and Verified Corpus, Spring 2022 (COLING 2022, to appear)
-    </li>
-    <ul>
-      <li>Maximus Chu, Zachary W. Taylor and Junyi Jessy Li</li>
-      <li>
-        Presents the first corpus of college application texts for the evaluation and fine-tuning of text simplification systems.
-      </li>
-    </ul>
-    <li>
-      <a href="https://github.com/maximuschu/text-simplification-college-admission" class="resume-links">Implementation of Text Simplification Models in the Domain of College Admissions, Spring 2022</a>
-    </li>
-    <ul>
-      <li>
-        Researched the application of text simplification in college applications, a domain which is traditionally done by manually.
-      </li>
-    </ul>
-    <li>
-      <a href="https://drive.google.com/file/d/161RZO8NSWm6Z3QZqckGMtmBBkNjbl6oQ/view?usp=sharing" class="resume-links">Improving Question Answering Models, Fall 2021</a> 
-    </li>
-    <ul>
-      <li>
-        Researched the use of adversarial challenge sets on question answering models, applied to help address and mitigate model shortcomings and help shape models to become more resilient and less prone to fallacies.
-      </li>
-    </ul>
-  </ul>
-</div>
-<div class="content" role="main">
-  <h2>Projects and Activities</h2>
-  <ul>
-    <li>
+    <li class="glow">
       <a href="https://gitlab.com/Danny-Trinh/travelwise" class="resume-links">Travelwise (Fall 2020)</a>
       <ul>
         <li>
@@ -522,7 +851,7 @@ A Professionally Simplified and Verified Corpus, Spring 2022 (COLING 2022, to ap
         </li>
       </ul>
     </li>
-    <li>
+    <li class="glow">
       <a href="https://www.youtube.com/watch?v=6oGvd5_0bFQ&feature=youtu.be" class="resume-links">The Eldritch Knight (Fall 2020)</a>
       <ul>
         <li>
@@ -530,7 +859,7 @@ A Professionally Simplified and Verified Corpus, Spring 2022 (COLING 2022, to ap
         </li>
       </ul>
     </li>
-    <li>
+    <li class="glow">
       <a href="https://github.com/maximuschu/infectious-disease-simulation" class="resume-links">Infectious Disease Simulation Model (Spinrg/Summer 2020)</a>
       <ul>
         <li>
@@ -541,7 +870,7 @@ A Professionally Simplified and Verified Corpus, Spring 2022 (COLING 2022, to ap
         </li>
       </ul>
     </li>
-    <li>
+    <li class="glow">
       <a href="https://www.mitenergyhack.org/s/ThreePlusTwo.pptx" class="resume-links">MIT EnergyHack (Fall 2019)</a>
       <ul>
         <li>
@@ -549,7 +878,7 @@ A Professionally Simplified and Verified Corpus, Spring 2022 (COLING 2022, to ap
         </li>
       </ul>
     </li>
-    <li>
+    <li class="glow">
       <a href="https://web.stanford.edu/class/cs140/projects/pintos/pintos_1.html" class="resume-links">PintOS (Fall 2019)</a>
       <ul>
         <li>
@@ -557,7 +886,7 @@ A Professionally Simplified and Verified Corpus, Spring 2022 (COLING 2022, to ap
         </li>
       </ul>
     </li>
-    <li>
+    <li class="glow">
       <a href="https://github.com/maximuschu/memory-allocation-library" class="resume-links">Memory Allocation Library (Spring 2019)</a>
       <ul>
         <li>
@@ -565,7 +894,7 @@ A Professionally Simplified and Verified Corpus, Spring 2022 (COLING 2022, to ap
         </li>
       </ul>
     </li>
-    <li>
+    <li class="glow">
       <a href="https://github.com/maximuschu/huffman" class="resume-links">Huffman Coding (Fall 2018)</a>
       <ul>
         <li>
@@ -575,8 +904,12 @@ A Professionally Simplified and Verified Corpus, Spring 2022 (COLING 2022, to ap
     </li>
   </ul>
 </div>
-<div class="content" role="main">
-  <h2>Technical Skills</h2>
+</div>
+</fieldset>
+<fieldset class="fieldset-single">
+  <legend>Technical Skills</legend>
+<div class="content-container" role="main">
+  <div class="content-single">
   <ul>
     <li>
       <b>Programming Languages:</b> C, C++, Python, Java, C#, Javascript, Typescript, SQL, HTML, CSS, Fortran, Assembly (x86 and Y86).
@@ -598,79 +931,139 @@ A Professionally Simplified and Verified Corpus, Spring 2022 (COLING 2022, to ap
     </li>
   </ul>
 </div>
-<div class="content" role="main">
-  <h2>Coursework</h2>
+</div>
+</fieldset>
+
+<fieldset class="fieldset-single">
+  <legend>Coursework</legend>
+<div class="content-container" role="main">
+  <div class="individual-glow">
   <ul>
     <li>
-      <a href="https://www.cs.utexas.edu/~gdurrett/courses/fa2021/cs378.shtml" class="resume-links">Natural Language Processing, Fall 2021</a>
+      <a href="https://www.cs.utexas.edu/~gdurrett/courses/fa2021/cs378.shtml" class="resume-links glow">Natural Language Processing, Fall 2021</a>
     </li>
     <li>
-      <a href="https://www.cs.utexas.edu/~beasley/syllabus/Fall%202021%20Data%20Mining.pdf" class="resume-links">Data Mining, Fall 2021</a>
+      <a href="https://www.cs.utexas.edu/~beasley/syllabus/Fall%202021%20Data%20Mining.pdf" class="resume-links glow">Data Mining, Fall 2021</a>
     </li>
     <li>
-      <a href="https://www.cs.utexas.edu/~huangqx/CS376_Computer_Vision.html" class="resume-links">Computer Vision, Fall 2021</a>
+      <a href="https://www.cs.utexas.edu/~huangqx/CS376_Computer_Vision.html" class="resume-links glow">Computer Vision, Fall 2021</a>
     </li>
     <li>
-      <a href="https://rpl.cs.utexas.edu/cs343_spring2021/index.html" class="resume-links">Artificial Intelligence, Spring 2021</a>
+      <a href="https://rpl.cs.utexas.edu/cs343_spring2021/index.html" class="resume-links glow">Artificial Intelligence, Spring 2021</a>
     </li>
     <li>
-      <a href="https://www.cs.utexas.edu/courses/378-behavioral-ethics" class="resume-links">Behavioral Ethics in the Digital Age, Spring 2021</a>
+      <a href="https://www.cs.utexas.edu/courses/378-behavioral-ethics" class="resume-links glow">Behavioral Ethics in the Digital Age, Spring 2021</a>
     </li>
     <li>
-      <a href="https://www.cs.utexas.edu/users/downing/cs371p/" class="resume-links">Object Oriented Programming, Fall 2020</a>
+      <a href="https://www.cs.utexas.edu/users/downing/cs371p/" class="resume-links glow">Object Oriented Programming, Fall 2020</a>
     </li>
     <li>
-      <a href="https://www.cs.utexas.edu/users/downing/cs373/" class="resume-links">Software Engineering, Fall 2020</a>
+      <a href="https://www.cs.utexas.edu/users/downing/cs373/" class="resume-links glow">Software Engineering, Fall 2020</a>
     </li>
     <li>
-      <a href="https://www.cs.utexas.edu/users/theshark/courses/cs378/" class="resume-links">Game Programming Paradigms, Fall 2020</a>
+      <a href="https://www.cs.utexas.edu/users/theshark/courses/cs378/" class="resume-links glow">Game Programming Paradigms, Fall 2020</a>
     </li>
     <li>
-      <a href="https://www.cs.utexas.edu/~ecprice/courses/331/sp20/" class="resume-links">Algorithms and Complexity, Spring 2020</a>
+      <a href="https://www.cs.utexas.edu/~ecprice/courses/331/sp20/" class="resume-links glow">Algorithms and Complexity, Spring 2020</a>
     </li>
     <li>
-      <a href="https://stat.utexas.edu/academics/undergraduate-course-inventory#SDS374C" class="resume-links">Parallel Computing, Spring 2020</a>
+      <a href="https://stat.utexas.edu/academics/undergraduate-course-inventory#SDS374C" class="resume-links glow">Parallel Computing, Spring 2020</a>
     </li>
     <li>
-      <a href="https://utdirect.utexas.edu/apps/student/coursedocs/courses/nlogon/download/10287887/" class="resume-links">Scientific Computation in Numerical Analysis, Spring 2020</a>
+      <a href="https://utdirect.utexas.edu/apps/student/coursedocs/courses/nlogon/download/10287887/" class="resume-links glow">Scientific Computation in Numerical Analysis, Spring 2020</a>
     </li>
     <li>
-      <a href="https://www.cs.utexas.edu/~ans/classes/cs439/index.html" class="resume-links">Principles of Computer Systems, Fall 2019</a>
+      <a href="https://www.cs.utexas.edu/~ans/classes/cs439/index.html" class="resume-links glow">Principles of Computer Systems, Fall 2019</a>
     </li>
     <li>
-      <a href="https://web.ma.utexas.edu/users/jwchong/math340L_fall19.html" class="resume-links">Matrices and Matrix Calculations, Fall 2019</a>
+      <a href="https://web.ma.utexas.edu/users/jwchong/math340L_fall19.html" class="resume-links glow">Matrices and Matrix Calculations, Fall 2019</a>
     </li>
     <li>
-      <a href="https://stat.utexas.edu/academics/undergraduate-course-inventory#SDS322" class="resume-links">Scientific Programming, Fall 2019</a>
+      <a href="https://stat.utexas.edu/academics/undergraduate-course-inventory#SDS322" class="resume-links glow">Scientific Programming, Fall 2019</a>
     </li>
     <li>
-      <a href="https://www.cs.utexas.edu/~byoung/cs429/syllabus429.html" class="resume-links">Computer Organization and Architecture, Spring 2019</a>
+      <a href="https://www.cs.utexas.edu/~byoung/cs429/syllabus429.html" class="resume-links glow">Computer Organization and Architecture, Spring 2019</a>
     </li>
     <li>
-      <a href="https://stat.utexas.edu/academics/undergraduate-course-inventory#SDS321" class="resume-links">Introduction to Probability and Statistics, Spring 2019</a>
+      <a href="https://stat.utexas.edu/academics/undergraduate-course-inventory#SDS321" class="resume-links glow">Introduction to Probability and Statistics, Spring 2019</a>
     </li>
     <li>
-      <a href="https://utdirect.utexas.edu/apps/student/coursedocs/courses/nlogon/download/9464368/" class="resume-links">Differential Equations with Linear Algebra, Spring 2019</a>
+      <a href="https://utdirect.utexas.edu/apps/student/coursedocs/courses/nlogon/download/9464368/" class="resume-links glow">Differential Equations with Linear Algebra, Spring 2019</a>
     </li>
     <li>
-      <a href="https://www.cs.utexas.edu/~scottm/cs314/" class="resume-links">Data Structures, Fall 2018</a>
+      <a href="https://www.cs.utexas.edu/~scottm/cs314/" class="resume-links glow">Data Structures, Fall 2018</a>
     </li>
     <li>
-      <a href="https://utdirect.utexas.edu/apps/student/coursedocs/courses/nlogon/download/8879362/" class="resume-links">Discrete Mathematics, Fall 2018</a>
+      <a href="https://utdirect.utexas.edu/apps/student/coursedocs/courses/nlogon/download/8879362/" class="resume-links glow">Discrete Mathematics, Fall 2018</a>
     </li>
     <li>
-      <a href="https://utdirect.utexas.edu/apps/student/coursedocs/courses/nlogon/download/8866997/" class="resume-links">Sequences, Series, and Multivariable Calculus, Fall 2018</a>
+      <a href="https://utdirect.utexas.edu/apps/student/coursedocs/courses/nlogon/download/8866997/" class="resume-links glow">Sequences, Series, and Multivariable Calculus, Fall 2018</a>
     </li>
   </ul>
 </div>
-<div class="content" role="main">
+</div>
+</fieldset>
+<!--div class="content" role="main">
   <h2>Honors and Awards</h2>
-  <p>
-    National Merit Finalist, University Honors, Texas All Region Orchestra (2015-2018), AP Scholar with Distinction.    
-  </p>
-</div>
-<div class="content" role="main">
-  <a href="assets/documents/Resume.pdf" class="resume-download">
-    PDF Version
-  </a>
-</div>
+  <ul>
+    <li>
+      National Merit Finalist
+    </li>
+    <li>
+      University Honors
+    </li>
+    <li>
+      Texas All Region Orchestra (2015-2018)
+    </li>
+    <li>
+      AP Scholar with Distinction
+    </li>
+  </ul>
+</div-->
+<!--div>
+
+  <div class="naccs">
+    <div class="grid">
+     <div class="gc gc--1-of-3">
+      <div class="menu" (click)="onSave()">
+       <div class="active"><span class="light"></span><span>Beer</span></div>
+       <div><span class="light"></span><span>Wine</span></div>
+       <div><span class="light"></span><span>Lemonade</span></div>
+      </div>
+     </div>
+     <div class="gc gc--2-of-3">
+      <ul class="nacc">
+       <li class="active">
+        <div>
+         <p>HERE</p>
+        </div>
+       </li>
+       <li>
+        <div>
+         <p>TEST</p>
+        </div>
+       </li>
+       <li>
+        <div>
+         <p>HELLO</p>
+        </div>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+
+</div-->
+<!--div class="content" role="main">
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="First"><p>Content 1</p></mat-tab>
+  <mat-tab label="Second"> Content 2 </mat-tab>
+  <mat-tab label="Third"> Content 3 </mat-tab>
+  <mat-tab label="Fourth"> Content 3 </mat-tab>
+  <mat-tab label="Fifth"> Content 3 </mat-tab>
+  <mat-tab label="Sixth"> Content 3 </mat-tab>
+</mat-tab-group>
+</div-->
+<a href="assets/documents/Resume.pdf" class="resume-download pdf" role="main">
+  PDF Version
+</a>

@@ -8,6 +8,7 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <style>
+  @import url('https://fonts.googleapis.com/css?family=Raleway:200');
   :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
@@ -42,7 +43,7 @@
     height: 50px;
     display: flex;
     align-items: center;
-    background-color: #363636;
+    
     color: white;
     font-weight: 600;
   }
@@ -79,9 +80,10 @@
   }
 
   .toolbarHeader{
-    padding: 0.5%; 
+    padding: 15px; 
     color:#cccccc;
     transition: text-shadow 0.2s linear;
+    font-family: "Raleway";
   }
 
   .toolbarHeader:hover {
@@ -93,6 +95,34 @@
     color: #ffffff;
     
   }
+
+  .toolbarTab{
+    display: inline-block;
+    position: relative;
+  }
+
+  .toolbarTab::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.125em;
+    background-color: rgb(255, 196, 0, 1);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+    
+  }
+
+  .toolbarTab:hover::after,
+  .toolbarTab:focus::after{
+    transform: scale(1);
+  }
+  
+
 
   @keyframes pulse{
     0%{
@@ -440,8 +470,8 @@
   <!--svg src="../assets/img/MC.svg" width="40"></svg-->
   <a href="/"><img class="mainLogo" alt="MC" src="../assets/img/MC.svg" height="40"></a>
   <!--p style="font-size:160%; padding: 1%; color:#cccccc;">MC</p-->
-  <span class="toolbarHeader"><a href="/resume">Résumé</a></span>
-  <span class="toolbarHeader"><a href="/about">About Me</a></span>
+  <span class="toolbarHeader"><a href="/resume" class="toolbarTab">Résumé</a></span>
+  <span class="toolbarHeader"><a href="/about" class="toolbarTab">About</a></span>
     <div class="spacer"></div>
     <input type="hidden" #language>
     <!--span style="padding: 0.5%; color:#cccccc;"[ngSwitch]="language.value">Language: EN</span-->

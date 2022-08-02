@@ -1,4 +1,5 @@
 <style>
+  @import url('https://fonts.googleapis.com/css?family=Raleway:200');
     :host {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
       font-size: 14px;
@@ -8,7 +9,15 @@
       -moz-osx-font-smoothing: grayscale;
     }
   
-    h1,
+    h1{
+      font-size: 50px;
+      font-family: 'Raleway';
+      color: rgba(255, 255, 255, 0.75);
+      transition: 0.2s linear;
+    }
+    h1:hover{
+      color: rgb(255, 255, 255, 1);
+    }
     h2,
     h3,
     h4,
@@ -106,16 +115,15 @@
       white-space: nowrap;
       display: inline-block;
       position: relative;
-      border: 2px solid #ffffff;
       animation: typeEnglish 10s steps(25,end) infinite;
     }
+    
   
     .homeChineseName{
       overflow: hidden;
       white-space: nowrap;
       display: inline-block;
       position: relative;
-      border: 2px solid #ffffff;
       animation: typeChinese 10s steps(3,end) infinite;
     }
   
@@ -124,7 +132,6 @@
       white-space: nowrap;
       display: inline-block;
       position: relative;
-      border: 2px solid #ffffff;
       animation: typeKorean 10s steps(4,end) infinite;
     }
     .blinkPointer{
@@ -132,7 +139,7 @@
       white-space: nowrap;
       display: inline-block;
       position: relative;
-      border: 2px solid #ffffff;
+      border-right: 2px solid #ffffff;
       animation: blinkPointer 0.75s infinite normal;
     }
   
@@ -141,7 +148,7 @@
       width: 0;
     }
     10%, 30% {
-      width: 7.3em;
+      width: 6.2em;
     }
     }
   
@@ -150,7 +157,7 @@
       width: 0;
     }
     40%, 60% {
-      width: 3em;
+      width: 3.05em;
     }
     }
   
@@ -159,12 +166,12 @@
       width: 0;
     }
     70%, 90% {
-      width: 4em;
+      width: 4.025em;
     }
     }
   
     @keyframes blinkPointer{
-      from{border-right-color: rgba(0, 0, 0, 0.75);}
+      from{border-right-color: rgba(255, 255, 255, 0.85);}
       to{border-right-color: transparent;}
     }
   
@@ -195,7 +202,7 @@
       max-width: 960px;
       flex-direction: column;
       align-items: center;
-      
+
     }
   
     svg.material-icons {
@@ -418,11 +425,13 @@
       }
     }
   </style>
-  
+ 
+ 
 <div class="content" role="main">
     <div class="card-container">
         <h1>
-        <span class="homeEnglishName">MAXIMUS CHU</span>
+        <div>Hello, my name is: </div>
+        <span class="homeEnglishName">Maximus Chu</span>
         <span class="homeChineseName">褚漢曦</span>
         <span class="homeKoreanName">막시무스</span>
         <span class="blinkPointer">‎</span>

@@ -5,7 +5,11 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatTabsModule} from '@angular/material/tabs';
+
 
 const routes: Routes = [
   {path: 'about', component: AboutComponent}, 
@@ -22,7 +26,7 @@ const routes: Routes = [
     HomeComponent
   ],
   imports: [
-    BrowserModule, RouterModule.forRoot(routes)
+    BrowserModule, RouterModule.forRoot(routes), NoopAnimationsModule, MatSliderModule, MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent], 

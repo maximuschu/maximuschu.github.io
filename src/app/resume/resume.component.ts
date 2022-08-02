@@ -12,4 +12,8 @@ export class ResumeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSave(): void{
+    console.log("TEST");
+  }
+
 }
